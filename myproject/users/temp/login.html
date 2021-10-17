@@ -1,0 +1,22 @@
+
+<!-- saved from url=(0100)https://www.pythonanywhere.com/user/abahor/files/home/abahor/diycopy/myproject/users/temp/login.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body data-new-gr-c-s-check-loaded="14.1033.0" data-gr-ext-installed="">{% extends 'main.html' %}
+{% block links %}
+<link rel="stylesheet" href="./login_files/login.css">
+{% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <form method="post">
+        {{ form.hidden_tag() }}
+        {{ form.email.label(class='login ema') }}
+        {{ form.email(class='login-password') }}<br>
+        {{ form.password.label(class='login') }}
+        {{ form.password(class='login-password') }}<br>
+        {{ form.submit(class='submit') }}
+        <div class="forget-password">
+          <a href="https://www.pythonanywhere.com/forget-password">Forget password</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

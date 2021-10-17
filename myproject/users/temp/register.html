@@ -1,0 +1,45 @@
+
+<!-- saved from url=(0103)https://www.pythonanywhere.com/user/abahor/files/home/abahor/diycopy/myproject/users/temp/register.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body data-new-gr-c-s-check-loaded="14.1033.0" data-gr-ext-installed="">{% extends 'main.html' %}
+{% block links %}
+<link rel="stylesheet" href="./register_files/register.css">
+{% endblock %}
+{% block content %}
+{% for msg in get_flashed_messages() %}
+
+    {{ msg|e }}
+
+{% endfor %}
+<div class="main">
+    <form class="reg" method="POST">
+        {{ form.hidden_tag() }}
+    <div>
+        {{ form.email.label }}
+        {{ form.email(class="form email") }}<br>
+    </div>
+    <div>
+        {{ form.username.label }}
+        {{ form.username(class="form password") }}<br>
+    </div>
+    <div>
+        {{ form.password.label }}
+        {{ form.password(class="form password") }}<br>
+    </div>
+      <div>
+        {{ form.pass_confirm.label }}
+        {{ form.pass_confirm(class="form password") }}<br>
+      </div>
+      <div>
+          {{ form.recaptcha() }}<br>
+      </div>
+      <div>
+        <span>by using this site you agree to the <a href="https://www.pythonanywhere.com/privacypolicy">terms of uses and condition</a></span><br>
+        {{ form.submit(class="form") }}<br>
+    </div>
+    </form>
+</div>
+<script type="text/javascript">
+  document.getElementsByClassName('email')[0].focus()
+</script>
+{% endblock %}
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

@@ -1,0 +1,46 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="jumbotron">
+    <form method='post'>
+      {% if post.text %}
+      <span class="text-muted">{{ post.text }}</span>
+      {% endif %}
+      {% if post.m == 'b' %}
+      <img src="{{ media }}" alt="" class="imasdasndasdasdas">
+      {% elif post.m == 'v' %}
+    {# % set d = session['this_is_for'] % #}
+
+           <video id="sad" style="max-width: 100%; width:600px height:450px" src="{{ media }}"></video>
+
+
+<script>
+    function onload() {
+    var xhr = new XMLHttpRequest();
+    var dre = document.getElementById("{{ d }}").src;
+    xhr.open("GET", dre);
+    xhr.responseType = "arraybuffer";
+
+    xhr.onload = function(error) {
+        var blob = new Blob([xhr.response]);
+        var blobUrl = URL.createObjectURL(blob);
+        console.log(blobUrl);
+        document.getElementById("{{ d }}").src = blobUrl;
+    }
+    xhr.send();
+}
+onload();
+player = new MediaElementPlayer('sad', {
+     features: ['playpause', 'current', 'progress', 'duration', 'chromecast','volume','fullscreen','pictureInPicture']
+});
+
+</script>
+
+    {{ endif }}
+
+    {% form.text.label %}
+    {{ form.text()}}
+    {% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+
+<!-- saved from url=(0101)https://www.pythonanywhere.com/user/abahor/files/home/abahor/diycopy/myproject/users/temp/change.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body data-new-gr-c-s-check-loaded="14.1033.0" data-gr-ext-installed="">{% extends 'main.html' %}
+{% block content %}
+<div class="jumbotron">
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+        {{ form.password.label }}
+        {{ form.password(class='form-control') }}
+        </div>
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+</div>
+<!-- <style>
+    .middle{
+        display:flex;
+        justify-content:center;
+    }
+</style> -->
+
+{% endblock %}
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

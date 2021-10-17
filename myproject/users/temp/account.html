@@ -1,0 +1,21 @@
+
+<!-- saved from url=(0102)https://www.pythonanywhere.com/user/abahor/files/home/abahor/diycopy/myproject/users/temp/account.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body data-new-gr-c-s-check-loaded="14.1033.0" data-gr-ext-installed="">{% extends 'main.html' %}
+{% block content %}
+<div class="jumbotron">
+    <img align="center" src="./account_files/{{current_user.profile_pic}}" style="max-width:100%" onclick="data()">
+    <p>{{current_user.email }}</p>
+    <form method="post" enctype="multipart/form-data">
+        {{ food.hidden_tag() }}
+        <div class="form-group">
+        {{ food.username.label }}
+        {{ food.username(class='form-control') }}<br>
+        </div>
+        {{ food.picture(class="pictured",id='media') }}<br>
+        {{ food.submit(class="btn btn-primary") }}
+        </form><br>
+        <a href="https://www.pythonanywhere.com/change"><button class="btn btn-secondary">Change password</button></a><br>
+
+</div>
+{% endblock %}
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

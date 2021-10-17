@@ -1,0 +1,648 @@
+@import url("/static/css/basic.css");
+/*@import url("/static/css/basic.css");*/
+
+/* -- page layout ----------------------------------------------------------- */
+
+body {
+    font-family: 'Georgia', serif;
+    font-size: 17px;
+    color: #000;
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+div.documentwrapper {
+    float: left;
+    width: 100%;
+}
+
+div.bodywrapper {
+    margin: 40px auto 0 auto;
+    width: 700px;
+}
+
+hr {
+    border: 1px solid #B1B4B6;
+}
+
+div.body {
+    background-color: #ffffff;
+    color: #3E4349;
+    padding: 0 30px 30px 30px;
+}
+
+img.floatingflask {
+    padding: 0 0 10px 10px;
+    float: right;
+}
+
+div.footer {
+    text-align: right;
+    color: #888;
+    padding: 10px;
+    font-size: 14px;
+    width: 650px;
+    margin: 0 auto 40px auto;
+}
+
+div.footer a {
+    color: #888;
+    text-decoration: underline;
+}
+
+div.related {
+    line-height: 32px;
+    color: #888;
+}
+
+div.related ul {
+    padding: 0 0 0 10px;
+}
+
+div.related a {
+    color: #444;
+}
+
+/* -- body styles ----------------------------------------------------------- */
+
+a {
+    color: #004B6B;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #6D4100;
+    text-decoration: underline;
+}
+
+div.body {
+    padding-bottom: 40px; /* saved for footer */
+}
+
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    font-family: 'Garamond', 'Georgia', serif;
+    font-weight: normal;
+    margin: 30px 0px 10px 0px;
+    padding: 0;
+}
+
+
+div.indexwrapper h1 {
+    text-indent: -999999px;
+    background: url(logo.png) no-repeat center center;
+    height: 120px;
+}
+
+
+div.body h2 { font-size: 180%; }
+div.body h3 { font-size: 150%; }
+div.body h4 { font-size: 130%; }
+div.body h5 { font-size: 100%; }
+div.body h6 { font-size: 100%; }
+
+a.headerlink {
+    color: white;
+    padding: 0 4px;
+    text-decoration: none;
+}
+
+a.headerlink:hover {
+    color: #444;
+    background: #eaeaea;
+}
+
+div.body p, div.body dd, div.body li {
+    line-height: 1.4em;
+}
+
+div.admonition {
+    background: #fafafa;
+    margin: 20px -30px;
+    padding: 10px 30px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+div.admonition p.admonition-title {
+    font-family: 'Garamond', 'Georgia', serif;
+    font-weight: normal;
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    line-height: 1;
+}
+
+div.admonition p.last {
+    margin-bottom: 0;
+}
+
+div.highlight{
+    background-color: white;
+}
+
+dt:target, .highlight {
+    background: #FAF3E8;
+}
+
+div.note {
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+div.seealso {
+    background-color: #ffc;
+    border: 1px solid #ff6;
+}
+
+div.topic {
+    background-color: #eee;
+}
+
+div.warning {
+    background-color: #ffe4e4;
+    border: 1px solid #f66;
+}
+
+p.admonition-title {
+    display: inline;
+}
+
+p.admonition-title:after {
+    content: ":";
+}
+
+pre, tt {
+    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-size: 0.85em;
+}
+
+img.screenshot {
+}
+
+tt.descname, tt.descclassname {
+    font-size: 0.95em;
+}
+
+tt.descname {
+    padding-right: 0.08em;
+}
+
+img.screenshot {
+    -moz-box-shadow: 2px 2px 4px #eee;
+    -webkit-box-shadow: 2px 2px 4px #eee;
+    box-shadow: 2px 2px 4px #eee;
+}
+
+table.docutils {
+    border: 1px solid #888;
+    -moz-box-shadow: 2px 2px 4px #eee;
+    -webkit-box-shadow: 2px 2px 4px #eee;
+    box-shadow: 2px 2px 4px #eee;
+}
+
+table.docutils td, table.docutils th {
+    border: 1px solid #888;
+    padding: 0.25em 0.7em;
+}
+
+table.field-list, table.footnote {
+    border: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+table.footnote {
+    margin: 15px 0;
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+table.field-list th {
+    padding: 0 0.8em 0 0;
+}
+
+table.field-list td {
+    padding: 0;
+}
+
+table.footnote td {
+    padding: 0.5em;
+}
+
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+dl dd {
+    margin-left: 30px;
+}
+
+pre {
+    padding: 0;
+    margin: 15px -30px;
+    padding: 8px;
+    line-height: 1.3em;
+    padding: 7px 30px;
+    background: #eee;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+dl pre {
+    margin-left: -60px;
+    padding-left: 60px;
+}
+
+tt {
+    background-color: #ecf0f3;
+    color: #222;
+    /* padding: 1px 2px; */
+}
+
+tt.xref, a tt {
+    background-color: #FBFBFB;
+}
+
+a:hover tt {
+    background: #EEE;
+}
+
+.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #eeffcc; }
+.highlight .c { color: #408090; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408090; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408090; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .cpf { color: #408090; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408090; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408090; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #333333 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #208050 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #208050 } /* Literal.Number.Bin */
+.highlight .mf { color: #208050 } /* Literal.Number.Float */
+.highlight .mh { color: #208050 } /* Literal.Number.Hex */
+.highlight .mi { color: #208050 } /* Literal.Number.Integer */
+.highlight .mo { color: #208050 } /* Literal.Number.Oct */
+.highlight .sa { color: #4070a0 } /* Literal.String.Affix */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .dl { color: #4070a0 } /* Literal.String.Delimiter */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #06287e } /* Name.Function.Magic */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .vm { color: #bb60d5 } /* Name.Variable.Magic */
+.highlight .il { color: #208050 } /* Literal.Number.Integer.Long */
+
+
+.fa:before{-webkit-font-smoothing:antialiased}.clearfix{*zoom:1}.clearfix:before,.clearfix:after{display:table;content:""}.clearfix:after{clear:both}@font-face{font-family:FontAwesome;font-weight:normal;font-style:normal;src:url("../fonts/fontawesome-webfont.eot");src:url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),url("../fonts/fontawesome-webfont.woff") format("woff"),url("../fonts/fontawesome-webfont.ttf") format("truetype"),url("../fonts/fontawesome-webfont.svg#FontAwesome") format("svg")}.fa:before{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;text-decoration:inherit}a .fa{display:inline-block;text-decoration:inherit}li .fa{display:inline-block}li .fa-large:before,li .fa-large:before{width:1.875em}ul.fas{list-style-type:none;margin-left:2em;text-indent:-0.8em}ul.fas li .fa{width:.8em}ul.fas li .fa-large:before,ul.fas li .fa-large:before{vertical-align:baseline}.fa-book:before{content:""}.icon-book:before{content:""}.fa-caret-down:before{content:""}.icon-caret-down:before{content:""}.fa-caret-up:before{content:""}.icon-caret-up:before{content:""}.fa-caret-left:before{content:""}.icon-caret-left:before{content:""}.fa-caret-right:before{content:""}.icon-caret-right:before{content:""}.rst-versions{position:fixed;bottom:0;left:0;width:300px;color:#fcfcfc;background:#1f1d1d;font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;z-index:400}.rst-versions a{color:#2980B9;text-decoration:none}.rst-versions .rst-badge-small{display:none}.rst-versions .rst-current-version{padding:12px;background-color:#272525;display:block;text-align:right;font-size:90%;cursor:pointer;color:#27AE60;*zoom:1}.rst-versions .rst-current-version:before,.rst-versions .rst-current-version:after{display:table;content:""}.rst-versions .rst-current-version:after{clear:both}.rst-versions .rst-current-version .fa{color:#fcfcfc}.rst-versions .rst-current-version .fa-book{float:left}.rst-versions .rst-current-version .icon-book{float:left}.rst-versions .rst-current-version.rst-out-of-date{background-color:#E74C3C;color:#fff}.rst-versions .rst-current-version.rst-active-old-version{background-color:#F1C40F;color:#000}.rst-versions.shift-up{height:auto;max-height:100%}.rst-versions.shift-up .rst-other-versions{display:block}.rst-versions .rst-other-versions{font-size:90%;padding:12px;color:gray;display:none}.rst-versions .rst-other-versions hr{display:block;height:1px;border:0;margin:20px 0;padding:0;border-top:solid 1px #413d3d}.rst-versions .rst-other-versions dd{display:inline-block;margin:0}.rst-versions .rst-other-versions dd a{display:inline-block;padding:6px;color:#fcfcfc}.rst-versions.rst-badge{width:auto;bottom:20px;right:20px;left:auto;border:none;max-width:300px}.rst-versions.rst-badge .icon-book{float:none}.rst-versions.rst-badge .fa-book{float:none}.rst-versions.rst-badge.shift-up .rst-current-version{text-align:right}.rst-versions.rst-badge.shift-up .rst-current-version .fa-book{float:left}.rst-versions.rst-badge.shift-up .rst-current-version .icon-book{float:left}.rst-versions.rst-badge .rst-current-version{width:auto;height:30px;line-height:30px;padding:0 6px;display:block;text-align:center}@media screen and (max-width: 768px){.rst-versions{width:85%;display:none}.rst-versions.shift{display:block}}
+
+
+
+
+
+/* Left for CSS overrides we need to make in the future */
+
+/* Fix badge on RTD Theme */
+
+/* Please keep RTD badge displayed on your site */
+.rst-versions.rst-badge {
+    display: block;
+
+    bottom: 50px;
+
+    /* Workaround for mkdocs which set a specific height for this element */
+    height: auto;
+}
+
+.rst-other-versions {
+    text-align: left;
+}
+
+.rst-other-versions a {
+    border: 0;
+}
+
+.rst-other-versions dl {
+    margin: 0;
+}
+
+
+/* Fix RTD theme bottom margin */
+.rst-content .line-block {
+    margin-bottom: 24px
+}
+
+/* Fix for nav bottom padding with flyout */
+nav.wy-nav-side {
+    padding-bottom: 3em;
+}
+
+/* bookmark icon */
+.bookmark-added-msg {display: none;}
+.bookmark-active {display: none;}
+.bookmark-inactive {display: none;}
+
+
+/* Read the Docs promotional block, only applicable to RTD.org
+
+To support sphinx_rtd_theme, a `wy-menu` element is added. Other themes are
+targeted using the theme identifier and use custom elements instead of a CSS
+framework html structure.
+
+*/
+
+div.ethical-sidebar,
+div.ethical-footer {
+    display: block !important;
+}
+.ethical-sidebar,
+.ethical-footer {
+    padding: 0.5em;
+    margin: 1em 0;
+}
+.ethical-sidebar img,
+.ethical-footer img {
+    width: 120px;
+    height: 90px;
+    display: inline-block;
+}
+.ethical-sidebar .ethical-callout,
+.ethical-footer .ethical-callout {
+    padding-top: 1em;
+    clear: both;
+}
+.ethical-sidebar .ethical-pixel,
+.ethical-footer .ethical-pixel,
+.ethical-fixedfooter .ethical-pixel {
+    display: none !important;
+}
+.ethical-sidebar .ethical-text,
+.ethical-footer .ethical-text {
+    margin-top: 1em;
+}
+.ethical-sidebar .ethical-image-link,
+.ethical-footer .ethical-image-link {
+    border: 0;
+}
+
+.ethical-sidebar,
+.ethical-footer {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #0a0a0a;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* Techstack badging */
+.ethical-sidebar ul {
+    margin: 0 !important;
+    padding-left: 0;
+    list-style: none;
+}
+.ethical-sidebar ul li {
+    display: inline-block;
+    background-color: lightskyblue;
+    color: black;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: 700;
+    margin: 0.25em;
+    border-radius: 0.25rem;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+    line-height: 1.41;
+}
+.ethical-sidebar ul li:not(:last-child) {
+    margin-right: .25rem;
+}
+
+.ethical-sidebar a,
+.ethical-sidebar a:visited,
+.ethical-sidebar a:hover,
+.ethical-sidebar a:active,
+.ethical-footer a,
+.ethical-footer a:visited,
+.ethical-footer a:hover,
+.ethical-footer a:active {
+    color: #0a0a0a;
+    text-decoration: none !important;
+    border-bottom: 0 !important;
+}
+
+.ethical-callout a {
+    color: #707070 !important;
+    text-decoration: none !important;
+}
+
+/* Sidebar promotions */
+.ethical-sidebar {
+    text-align: center;
+}
+
+/* Footer promotions */
+.ethical-footer {
+    text-align: left;
+
+    font-size: 14px;
+    line-height: 20px;
+}
+.ethical-footer img {
+    float: right;
+    margin-left: 25px;
+}
+.ethical-footer .ethical-callout {
+    text-align: center;
+}
+.ethical-footer small {
+    font-size: 10px;
+}
+
+/* Fixed footer promotions */
+.ethical-fixedfooter {
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #eee;
+    border-top: 1px solid #bfbfbf;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 0.5em 1.5em;
+    text-align: center;
+    color: #404040;
+    width: 100%;    /* Fallback for Opera Mini */
+    width: 100vw;
+}
+@media (min-width: 769px) {
+    /* Improve viewing on non-mobile */
+    .ethical-fixedfooter {
+        font-size: 13px;
+        padding: 1em 1.5em;
+    }
+}
+.ethical-fixedfooter .ethical-text:before {
+    margin-right: 4px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background-color: #4caf50;
+    color: #fff;
+    content: "Sponsored";
+}
+.ethical-fixedfooter .ethical-callout {
+    color: #999;
+    padding-left: 6px;
+    white-space: nowrap;
+}
+.ethical-fixedfooter a,
+.ethical-fixedfooter a:hover,
+.ethical-fixedfooter a:active,
+.ethical-fixedfooter a:visited {
+    color: #404040;
+    text-decoration: none;
+}
+.ethical-fixedfooter .ethical-close {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+/* RTD Theme specific customizations */
+.wy-nav-side .ethical-rtd {
+    /* RTD theme doesn't correctly set the sidebar width */
+    width: 300px;
+    padding: 0 1em;
+}
+.ethical-rtd .ethical-sidebar {
+    /* RTD theme doesn't set sidebar text color */
+    color: #b3b3b3;
+
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@media (min-width: 769px) {
+    /* Make sure the fixed footer ad is under the RTD theme version selector */
+    .wy-body-for-nav .ethical-fixedfooter {
+        padding-left: 300px;
+    }
+}
+
+/* Alabaster specific customizations */
+.ethical-alabaster a.ethical-image-link {
+    /* Alabaster adds a border even to image links on hover */
+    border: 0 !important;
+}
+.ethical-alabaster hr {
+    /* Alabaster needs some extra spacing before the footer ad */
+    margin-top: 2em;
+}
+.ethical-alabaster::before {
+    /* Alabaster's search box above the ad is floating */
+    clear: both;
+    content: '';
+    display: table;
+    margin-top: 3em;
+}
+
+/* Dark theme */
+.ethical-dark-theme .ethical-sidebar {
+    background-color: #4e4b4b;
+    border: 1px solid #a0a0a0;
+    color: #c2c2c2 !important;
+}
+.ethical-dark-theme a,
+.ethical-dark-theme a:visited {
+    color: #e6e6e6 !important;
+    border-bottom: 0 !important;
+}
+.ethical-dark-theme .ethical-callout a {
+    color: #b3b3b3 !important;
+}
+
+
+/* Ad block nag */
+.keep-us-sustainable {
+    padding: .5em;
+    margin: 1em 0;
+    text-align: center;
+    border: 1px dotted #8ECC4C;
+}
+.keep-us-sustainable a,
+.keep-us-sustainable a:hover,
+.keep-us-sustainable a:visited {
+    text-decoration: none;
+}
+/* Read the Docs theme specific fixes */
+.wy-body-for-nav .keep-us-sustainable {
+    margin: 1em 2em 1em 1em;
+    color: #b3b3b3;
+}
+.wy-body-for-nav .keep-us-sustainable a {
+    color: #efefef;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* Margin between the search results */
+.rtd_search_hits_spacing {
+    margin: 10px 0;
+}

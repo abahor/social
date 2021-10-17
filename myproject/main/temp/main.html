@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>news Feed</title>
+    <link rel="shortcut icon" href="/static/icons8-social-octopus-48.png">
+    <link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+      <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelement-and-player.min.js"></script>
+    <script src="/static/js/strtime.js"></script>
+    {% block links %}
+    {% endblock %}
+  </head>
+  <body>
+    <header class="sticky-top">
+      <h2 class="tit"><a href="{{url_for('main.index')}}">ultimate</a></h2>
+      {% if current_user.is_authenticated %}
+      <ul class="list">
+        <li><a href="{{url_for('users.account')}}">{{ current_user.username }}</a></li>
+        <li><a href="{{url_for('main.index')}}">Timeline</a></li>
+      </ul>
+      <form method="get" class="search-form" action="/search">
+        <input type="search" class="form-control" placeholder="Search" name="q">
+      </form>
+      <div class="float-right"><a href="/logout"><button class=btn>logout</button></a></div>
+      {% else %}
+      <ul class="list">
+        <li><a href="{{url_for('users.login')}}">login</a></li>
+        <li><a href="{{url_for('users.register')}}">register</a></li>
+      </ul>
+      {% endif %}
+    </header>
+    <div class="container">
+      <div class="feed">
+        {% block content %}
+        {% if current_user.is_authenticated %}
+        <div class="create">
+          <form class="reate" method="post" enctype="multipart/form-data">
+            {{ new_post.hidden_tag() }}
+            <!--input type="text" class="title" name="" value="" placeholder="title"-->
+            {{ new_post.title(class='title') }}
+
+<!--            <textarea rows="8" cols="80"  class="text" name="text" placeholder="What do want to tell to the world?"></textarea>-->
+            {{ new_post.text(class='text')}}
+            <div class="files" onclick="data()">
+            </div>
+            {{ new_post.submit(class='submit') }}
+            {{ new_post.media(id='media') }}
+          </form>
+        </div>
+        {% endif %}
+
+      <div class="post mb-3" id="scroller">
+        <template id="post_template">
+
+
+
+
+
+
+            </template>
+    </div>
+    <div class="d-flex justify-content-center mb-3" id="sentinel">
+         <div class="spinner-border" role='status'></div>
+    </div>
+  </div>
+
+   </div>
+
+    <script src="/static/js/load.js"></script>
+   {% endblock %}
+<script type="text/javascript">
+    function data(){
+        document.getElementById('media').click()
+    }
+  </script>
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

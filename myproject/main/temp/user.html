@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="jumbotron">
+  <h5>{{ user.username }}</h5>
+  <img src="{{ user.profile_pic }}" alt="">
+</div>
+{% for post in user.post.all() %}
+<div class="card mb-3 animated fadeIn shadow-sm">
+  <div class="card-body">
+    <div class="profile">
+      <img class="pro" src="{{ post.author.profile_pic }}" alt="">
+    </div>
+      <h4 class="card-title">{{ post.title }}</h4>
+      <a href="{{ url_for('main.postsd') }}?ipo={{ post.id }}"><p>{{ post.date.strftime('%Y-%m-%d') }}</p></a>
+      {% if post.text %}
+      <span class="text-muted">{{ post.text }}</span>
+      {% endif %}
+      {% if post.m == 'b' %}
+      <img src="{{ post.images }}" alt="" class="imasdasndasdasdas">
+      {% elif post.m == 'v' %}
+    {% set d = variable | re %}
+
+           <video id="{{ d }}" style="max-width: 100%; width:600px" src="{{ post.images }}"></video>
+            <script src="/controllers?c={{ d }}">
+
+            </script>
+      {% endif %}
+
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

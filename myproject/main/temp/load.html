@@ -1,0 +1,6 @@
+
+{{ post.title }}
+{{ post.date|dat }}
+
+{% if post.text %} {{ post.text }} {% endif %} {% if post.m == 'b' %}  {% elif post.m == 'v' %} {% set d = session['this_is_for'] %} 
+ {% endif %}
